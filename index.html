@@ -80,11 +80,12 @@ function switchTab(tab) {
   }
 }
 
-// 🔗 Gắn sự kiện
-document.getElementById("login-btn").addEventListener("click", doLogin);
-document.getElementById("register-btn").addEventListener("click", doSignup);
-document.getElementById("tab-login").addEventListener("click", () => switchTab("login"));
-document.getElementById("tab-register").addEventListener("click", () => switchTab("register"));
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("login-btn")?.addEventListener("click", doLogin);
+  document.getElementById("register-btn")?.addEventListener("click", doSignup);
+  document.getElementById("tab-login")?.addEventListener("click", () => switchTab("login"));
+  document.getElementById("tab-register")?.addEventListener("click", () => switchTab("register"));
+});
 
 // Show login mặc định
 switchTab("login");
